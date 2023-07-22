@@ -57,9 +57,16 @@ produtos.forEach((produto) => {
     botaoEditar.setAttribute('onclick', `mostraEditar(${produto.id})`);
     botaoEditar.innerHTML = 'EDITAR';
 
+    let botaoView = document.createElement('button');
+    botaoView.setAttribute('class', 'btn-view');
+    botaoView.setAttribute('onclick', `mostraView(${produto.id})`);
+    botaoView.innerHTML = 'VIEW';
+
     //criando TDs e anexando a TR
     let td = document.createElement('td');
 
+    td.appendChild(botaoView);
+    td.appendChild(document.createTextNode("    "));
     td.appendChild(botaoEditar);
     td.appendChild(document.createTextNode("    "));
     td.appendChild(botaoApagar);
@@ -138,6 +145,8 @@ else {
     div.classList.add('div-editar-inativo');
 }
 
+
+
 //filtrar o vetor produtos e pegar só aquele produto com aquela id
 let vetorProdutoEditar = produtos.filter(function (item) {
     return item.id == idDoProdutoEdit;
@@ -160,6 +169,8 @@ if (divCadastrar.classList.contains('div-cadastrar-ativo')) {
 }
 
 }
+
+
 
 function salvarAlteracao() {
 //pegos os valores do campos

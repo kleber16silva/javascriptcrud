@@ -47,7 +47,25 @@ h2{
     display: none;
 }
 
+
+
 .div-editar-ativo{    
+    width: 40%;
+    min-width:30%;
+    text-align: center;
+    margin: 4vw;
+    display: block;
+}
+
+.div-view-inativo{    
+    width: 40%;
+    min-width:30%;
+    text-align: center;
+    margin: 4vw;
+    display: none;
+}
+
+.div-view-ativo{    
     width: 40%;
     min-width:30%;
     text-align: center;
@@ -67,6 +85,11 @@ button{
 }
 
 .btn-editar{
+    font-size: 0.5em;
+    background-color: blue ;
+}
+
+.btn-view{
     font-size: 0.5em;
     background-color: blue ;
 }
